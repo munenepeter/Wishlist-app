@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buy Here</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="Home" href="index.html">
+    </head>
+    <body>
+
+        <div class="body">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo.png" width="125px"></a>
+                </div>
+               <nav>
+                   <ul id="menuitems">
+                       <li><a href="index.html">Home</a></li>
+                       <li><a href="product.html">Products</a></li>
+                       <li><a href="about.html">About</a></li>
+                       <li><a href="contact.html">Contact</a></li>
+                       <li><a href="account.html">Account</a></li>
+                   </ul>
+               </nav> 
+               <a href="productdetails.html"><img src="assets/images/CART.png" width="20px" height="20px">
+               <img src="assets/images/menu33.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+
+
+<!-----cart items details-->
+<div class="small-container cart page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+        <td><div class="cart-info">
+            <img src="assets/images/pro1.jpg">
+            <div>
+                <p>dishwash</p>
+                <small>Price:Ksh 100</small>
+                <a href="">Remove</a>
+            </div>
+        </div>
+    </td>
+        <td><input type="number" value="1"></td>
+        <td>100</td>
+        </tr>
+        <tr>
+            <td><div class="cart-info">
+                <img src="assets/images/pro.jpg">
+                <div>
+                    <p>handwash</p>
+                    <small>Price:Ksh 130</small>
+                    <a href="">Remove</a>
+                </div>
+            </div>
+        </td>
+            <td><input type="number" value="1"></td>
+            <td>100</td>
+            </tr>
+            <tr>
+                <td><div class="cart-info">
+                    <img src="assets/images/pro10.jpg">
+                    <div>
+                        <p>shower gel</p>
+                        <small>Price:Ksh 150</small>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+                <td><input type="number" value="1"></td>
+                <td>100</td>
+                </tr>
+    </table>
+<div class="total-price">
+    <table>
+        <tr>
+            <td>Subtotal</td>
+            <td>ksh.200</td>
+        </tr>
+        <tr>
+            <td>tax</td>
+            <td>ksh.200</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>ksh.200</td>
+        </tr>
+        <button type="submit" class="btn">Buy</button>
+    </table>
+    </table>
+    </table>
+</div>
+
+
+
+
+</div>
+</div>
+<!-----footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our App</h3>
+                <p>Download our App on Android or ios phone.</p>
+                <div class="app-logo">
+                    <img src="assets/images/google-play.png">
+                    <img src="assets/images/ios2.jpeg">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="assets/images/altonslogo.jpg">
+                <p>Available on Android and iphones.</p>
+               
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li><a href="https://web.facebook.com/altonsoaps" class="som">Facebook</a></li>
+                    <li><a href="" class="som">Twitter</a></li>
+                    <li><a href="" class="som">YouTube</a></li>
+                    <li><a href="https://Instagram.com/altonsoaps" class="som">Instagram</a></li> 
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>Copyright@2021 Altonsoaps</p>
+    </div>
+</div>
+<!-----js for toggle menu---->
+<script>
+    var menuitems = document.getElementById("menuitems");
+    menuitems.style.maxHeight ="0px";
+
+    function menutoggle(){
+        if(menuitems.style.maxHeight == "0px"){
+            menuitems.style.maxHeight ="200px";
+        }
+    
+    else{
+        menuitems.style.maxHeight ="0px";
+    }
+    }
+
+
+    
+</script>
+
+
+</body>
+</html>

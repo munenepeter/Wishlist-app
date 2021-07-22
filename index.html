@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Reach Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="Home" href="index.html">
+</head>
+
+<body>
+
+    <div class="body">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="productdetails.html" href="cart.html"><img src="assets/images/CART.png" width="20px"
+                        height="20px"></a>
+                <img src="assets/images/menu33.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+        <!-----contacts-->
+
+        <nav class="contact">
+            <div class="row">
+                <div class="col-1">
+
+                    <a href="https://whatsapp.com/dl/"> <img src="assets/images/phonecall.png">Whatsapp</a>
+
+                </div>
+                <div class="col-2">
+                    <a href="https://Instagram.com/altonsoaps"> <img src="assets/images/instagram.png"></a>Instagram</a>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <a href="https://web.facebook.com/altonsoap"> <img src="assets/images/facebook.png"></a>Facebook</a>
+                </div>
+                <div class="col-1">
+
+                    <a href="https://twitter.com/altonsoaps?s=01"> <img src="assets/images/twitter.png"></a>Twitter</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <a href="https://www.altonsoaps@gmail.com"> <img src="assets/images/email.png"></a>Email</a>
+                </div>
+            </div>
+    </div>
+    </nav>
+
+    <!-----footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download our App on Android or ios phone.</p>
+                    <div class="app-logo">
+                        <img src="assets/images/google-play.png">
+                        <img src="assets/images/ios2.jpeg">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="assets/images/altonslogo.jpg">
+                    <p>Available on Android and iphones.</p>
+
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li><a href="https://web.facebook.com/altonsoaps" class="som">Facebook</a></li>
+                        <li><a href="" class="som">Twitter</a></li>
+                        <li><a href="" class="som">YouTube</a></li>
+                        <li><a href="https://Instagram.com/altonsoaps" class="som">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p>Copyright@2021 Altonsoaps</p>
+        </div>
+    </div>
+    <!-----js for toggle menu---->
+    <script>
+        var menuitems = document.getElementById("menuitems");
+        menuitems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuitems.style.maxHeight == "0px") {
+                menuitems.style.maxHeight = "200px";
+            }
+
+            else {
+                menuitems.style.maxHeight = "0px";
+            }
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
