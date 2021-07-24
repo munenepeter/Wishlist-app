@@ -1,5 +1,5 @@
 <?php
-
+  include_once 'Core/bootstrap.php'; 
 //set & initialize the session['wishlist']
 
 
@@ -15,7 +15,9 @@ if (isset($_POST['product_id'])) {
 
             $item_array = [
                 'product_id' => $_POST['product_id'],
-                'quantity' => $_POST['quantity']
+                'size' => $_POST['size'],
+                'quantity' => $_POST['qty'],
+                'price' =>  $_POST['price']
             ];
 
             $_SESSION['wishlist'][$count] = $item_array;
@@ -36,7 +38,7 @@ if (isset($_POST['product_id'])) {
         //create session variable
         $_SESSION['wishlist'][0] = $item_array;
     }
-    var_dump($_SESSION['wishlist']); 
-    // echo $_SESSION['wishlist'][0]['product_id'];
- 
+    App::get('database')->insert('wishlist', $_SESSION['wishlist']);
+    echo "Added to your wishlist";
+    session_destroy();
 }

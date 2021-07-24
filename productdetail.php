@@ -38,16 +38,18 @@
             // // console.log("price: " + price + "\nqty: " + qty + "\nsize: " + size);
             $("#wishlist").click(function(e) {
 
-                $.post("Core/wishlist.php", {
+                $.post("wishlist.php", {
 
                     product_id: $("#product_id").val(),
                     size: $("#size option:selected").text(),
                     qty: $("#qty").val(),
                     price: $("#qty").val() * $("#price").val()
 
-                }, function(data, status) {
+                }
+                , function(data, status) {
                     $("#test").html(data);
-                });
+                }
+                );
             });
         });
     </script>
