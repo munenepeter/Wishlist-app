@@ -44,7 +44,7 @@ class QueryBuilder {
             $statement->execute($parameters);
         } catch (\Exception $e) {
 
-            throw new \Exception('Something is up with your Insert!' . $e->getMessage());
+            throw new \Exception("Something is up with your Select {$statement}!" . $e->getMessage());
             die();
         }
     }
