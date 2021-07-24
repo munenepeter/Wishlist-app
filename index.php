@@ -44,6 +44,7 @@
                 </select>
             </div>
             <?php
+      
 
             //   Her i get the products in the Database
 
@@ -61,10 +62,7 @@
 
                                 <a href="productdetail.php?product=<?= $product['product_id'] ?>">View Product</a>
                             </div>
-                            <div class="buttons">
-                                <button>Wishlist</button>
-                                <button>Cart</button>
-                            </div>
+                            
                         </div>
 
 
