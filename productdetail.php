@@ -50,6 +50,7 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="account.html">Account</a></li>
+                        <li><a href="wishlist.php">Wishlist</a><sup class="text-red-800"><?=count($_SESSION['wishlist']);?></sup></li>
                     </ul>
                 </nav>
                 <a href="cart.html"> <img src="assets/images/CART.png" width="20px" height="20px"></a>
@@ -58,38 +59,6 @@
         </div>
 
 
-
-
-        <!--  -->
-        <!----single product details---->
-        <!-- <div class="small-container single-product">
-            <div class="row">
-                <div class="col-2">
-                    <img src="<? // $product['product_img'] 
-                                ?>" width="100%" id="ProductImg">
-                </div>
-                <div class="col-2">
-                    <p>Home/<? // $product['product_name'] 
-                            ?></p>
-                    <h1><? // $product['product_name'] 
-                        ?></h1>
-                    <h4>ksh.<? // $product['product_price'] 
-                            ?>.00</h4>
-                    <select>
-                        <option>0.5 litre litre</option>
-                        <option>1 litre</option>
-                        <option>5 litre</option>
-                    </select>
-                    <button class="btn">Add To wishlist</button>
-                    <input type="number" value="0">
-                    <a href="" class="btn">Add To Cart</a>
-                    <h3>Product Details</h3><br>
-                    <p><? // $product['product_desc'] 
-                        ?></p>
-                </div>
-            </div>
-
-        </div> -->
         <!-- Get product_id from url -->
         <?php
 
@@ -130,18 +99,14 @@
                             <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add To Cart</button>
                             <input type="hidden" class="hidden" id="price" value="<?= $product['product_price'] ?>">
                             <input type="hidden" class="hidden" id="product_id" value="<?= $product['product_id'] ?>">
-                            <button id="wishlist" class=" bg-gray-200 rounded-full w-10 h-10  p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-                                <svg id="svg" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class=" w-5 h-5" viewBox="0 0 24 24">
+                            <button id="wishlist" class="bg-<?= (Request::CheckifProductIsInWishlist($product['product_id'])) ? 'blue-800' : 'gray-200'; ?> rounded-full w-10 h-10  p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                                <svg id="svg" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="<?= (Request::CheckifProductIsInWishlist($product['product_id'])) ? 'text-red-400 opacity-50 cursor-not-allowed' : ''; ?> w-5 h-5" viewBox="0 0 24 24">
                                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                                 </svg>
                             </button>
 
                         </div>
                     </div>
-                    <?php
-                    // var_dump($_SESSION['wishlist']);
-
-                    ?>
                 </div>
             </div>
         </section>
@@ -187,6 +152,9 @@
         </div>
     </div>
     <!-----footer-->
+
+
+
     <div class="footer">
         <div class="container">
             <div class="row">

@@ -54,6 +54,7 @@
             ?>
             <div class="row">
                 <?php foreach ($products as $product) : ?>
+                    
                     <div class="col-4">
                         <img src="<?= $product['product_img'] ?>">
                         <div class="flex">
