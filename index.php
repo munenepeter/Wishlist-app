@@ -44,8 +44,8 @@
                 </select>
             </div>
             <?php
-                var_dump($_SESSION['wishlist']);
-                 var_dump(Request::getwishlist());
+                // var_dump($_SESSION['wishlist']);
+                //  var_dump(Request::getwishlist());
 
             //   Her i get the products in the Database
 

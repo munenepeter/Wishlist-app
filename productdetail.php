@@ -14,28 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Run The AJAX calls to add items into the wishlist -->
     <script>
-        // $(document).on('click', '#wishlist', function(e) {
-
-        //     var product_id = $("#product_id").val(); 
-
-        //     $.ajax({
-        //         url: "Core/wishlist.php",
-        //         method: "POST",
-        //         data: {
-        //             product_id: $("#product_id").val()
-        //         },
-        //         success: function(data, status) {
-        //             console.log("Data: " + data + "\nStatus: " + status);
-        //         }
-        //     });
-        // }); 
-
         $(document).ready(function() {
-            // let product_id = $("#product_id").val();
-            // let size = $("#size option:selected").text();
-            // let qty = $("#qty").val();
-            // let price = qty * $("#price").val();
-            // // console.log("price: " + price + "\nqty: " + qty + "\nsize: " + size);
             $("#wishlist").click(function(e) {
 
                 $.post("wishlist.php", {
@@ -45,11 +24,11 @@
                     qty: $("#qty").val(),
                     price: $("#qty").val() * $("#price").val()
 
-                }
-                , function(data, status) {
+                }, function(data, status) {
+                    $("#wishlist").addClass("bg-blue-800").removeClass("bg-gray-200");
+                    $("#svg").addClass("text-red-400");
                     $("#test").html(data);
-                }
-                );
+                });
             });
         });
     </script>
@@ -113,6 +92,7 @@
         </div> -->
         <!-- Get product_id from url -->
         <?php
+
         // Get product_id from url
         $product_id = (int)$_GET['product'];
         //Query the database to get the product info
@@ -150,15 +130,18 @@
                             <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Add To Cart</button>
                             <input type="hidden" class="hidden" id="price" value="<?= $product['product_price'] ?>">
                             <input type="hidden" class="hidden" id="product_id" value="<?= $product['product_id'] ?>">
-                            <button type="submit" id="wishlist" class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <button id="wishlist" class=" bg-gray-200 rounded-full w-10 h-10  p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                                <svg id="svg" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class=" w-5 h-5" viewBox="0 0 24 24">
                                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                                 </svg>
                             </button>
 
                         </div>
                     </div>
-                    <?php ?>
+                    <?php
+                    // var_dump($_SESSION['wishlist']);
+
+                    ?>
                 </div>
             </div>
         </section>
