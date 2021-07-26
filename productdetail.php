@@ -50,7 +50,7 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="account.html">Account</a></li>
-                        <li><a href="wishlist.php">Wishlist</a><sup class="text-red-800"><?=count($_SESSION['wishlist']);?></sup></li>
+                        <li><a href="wishlistshow.php">Wishlist</a><sup class="text-red-800"><?=count($_SESSION['wishlist']);?></sup></li>
                     </ul>
                 </nav>
                 <a href="cart.html"> <img src="assets/images/CART.png" width="20px" height="20px"></a>

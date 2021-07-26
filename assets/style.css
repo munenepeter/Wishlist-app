@@ -8,9 +8,10 @@ body{
     font-family:Georgia, 'Times New Roman', Times, serif ;
 }
 .navbar{
+    top: 0;
     display: flex;
     align-items: center;
-    padding: 20px;
+   
 }
 nav{
     flex: 1;
@@ -32,6 +33,7 @@ p{
     color: #555;
 }
 .container{
+    top: 0;
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
