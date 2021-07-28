@@ -1,0 +1,24 @@
+This the old supported look
+
+
+
+    <div class="row">
+                <?php foreach ($products as $product) : ?>
+
+                    <div class="col-4">
+                        <img src="<?= $product['product_img'] ?>">
+                        <div class="flex">
+                            <div class="text">
+                                <h4><?= $product['product_name'] ?></h4>
+                                <p>ksh.<?= $product['product_price'] ?>.00</p>
+
+                                <a href="productdetail.php?product=<?= $product['product_id'] ?>">View Product</a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                <?php endforeach ?>
+
+            </div>
