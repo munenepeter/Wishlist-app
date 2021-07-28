@@ -55,24 +55,25 @@
                         <div class="p-4 md:w-1/3">
                             <div class="h-full  rounded-lg overflow-hidden">
                                 <img class="lg:h-48 md:h-36 mx-auto rounded-md  object-cover object-center" src="<?= $product['product_img'] ?>" alt="blog">
-                                <div class="p-6 border-r-2 ">
-                                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-                                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3"><?= $product['product_name'] ?></h1>
+                                <div class="p-6 border-r-2 border-b-2  border-l-2 ">
+                                    <h2 class="tracking-widest text-xs text-center title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
+                                    <div class="flex items-center justify-between ">
+                                        <h1 class="title-font text-lg font-medium text-gray-900 mb-3"><?= $product['product_name'] ?></h1>
 
-                                    <p>ksh.<?= $product['product_price'] ?>.00</p>
-                                    <div class="flex items-center flex-wrap ">
+                                        <p>ksh.<?= $product['product_price'] ?>.00</p>
+                                    </div>
+                                    <div class="flex items-center justify-between flex-wrap ">
                                         <a href="productdetail.php?product=<?= $product['product_id'] ?>" class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">View Product
 
                                         </a>
                                         <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                                             </svg>
 
                                         </span>
                                         <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                                             </svg>
 
