@@ -32,12 +32,15 @@ a{
 p{
     color: #555;
 }
-.container{
+.navigation{
     top: 0;
-    max-width: 1300px;
+    max-width: 100%;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
+    background-color: #162d48;
+    margin-bottom: 14px;
+    color:white;
 }
 .row{
     display: flex;
@@ -269,8 +272,7 @@ ul{
 /*---------all products--------*/
 .row-2{
     display: flex;
-    justify-content: space-between;
-    margin: 100px auto 50px;
+    justify-content: space-between; 
 }
 select{
     border: 1px solid #0844eb;
